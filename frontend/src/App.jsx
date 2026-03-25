@@ -1,0 +1,50 @@
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import ProductDetails from "./pages/ProductDetails";
+import AddProduct from "./admin/AddProduct";
+import EditProduct from "./admin/EditProduct";
+import ProductList from "./admin/ProductList";
+import Navbar from "./components/Navbar";
+import Cart from "./pages/Cart";
+import CheckoutAddress from "./pages/CheckoutAddress";
+import Checkout from "./pages/Checkout";
+import OrderSuccess from "./pages/OrderSuccess";
+function Layout() {
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+    </>
+  );
+}
+
+const router = createBrowserRouter([
+  {
+    path: "/",   // ✅ ADD THIS
+    element: <Layout />,
+    children: [
+      { index: true, element: <Home /> },  // cleaner than path: "/"
+      { path: "login", element: <Login /> },
+      { path: "signup", element: <Signup /> },
+      { path: "product/:id", element: <ProductDetails /> },
+
+      { path: "admin/products", element: <ProductList /> },
+      { path: "admin/products/add", element: <AddProduct /> },
+      { path: "admin/products/update/:id", element: <EditProduct /> },
+
+      { path: "checkout-address", element: <CheckoutAddress /> },
+      { path: "checkout", element: <Checkout /> },
+      { path: "cart", element: <Cart /> },
+
+      { path: "order-success/:id", element: <OrderSuccess /> },
+
+      { path: "*", element: <h1>Page Not Found</h1> }
+    ]
+  }
+]);
+
+export default function App() {
+  return <RouterProvider router={router} />;
+}
