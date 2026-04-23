@@ -4,7 +4,7 @@ import {saveAddress,getAddresses} from '../controllers/addressController.js';
 
 const router = express.Router();
 
-router.post('/add',saveAddress);
-router.get('/:userId',getAddresses);
+router.post('/api/address/add',saveAddress);
+router.get('/api/address/:userId',getAddresses);
 
 export default router;
