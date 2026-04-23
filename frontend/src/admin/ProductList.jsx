@@ -7,7 +7,7 @@ export default function ProductList() {
 
   const loadProducts = async () => {
     try {
-      const response = await api.get("/products");
+      const response = await api.get("/api/products");
       setProducts(response.data);
     } catch (error) {
       console.error("Error loading products:", error);
@@ -16,7 +16,7 @@ export default function ProductList() {
 
   const deleteProduct = async (id) => {
     try {
-      await api.delete(`/products/delete/${id}`);
+      await api.delete(`/api/products/delete/${id}`);
       alert("Product deleted successfully!");
       loadProducts();
     } catch (err) {
