@@ -9,9 +9,9 @@ Built with a scalable MERN architecture to simulate real-world production applic
 
 ## 🌐 Live Demo
 
-- 🖥️ Frontend: [link](https://ecommerce-web-prajakta.netlify.app/)
-- ⚙️ Backend API:[link](https://ecommerce-mern-susr.onrender.com)  
-- 📂 GitHub Repo:[link](https://github.com/yadavprajakta0807/ecommerce-mern.git) 
+- 🖥️ Frontend: [https://ecommerce-web-prajakta.netlify.app]
+- ⚙️ Backend API:[https://ecommerce-mern-susr.onrender.com]  
+- 📂 GitHub Repo:[https://github.com/yadavprajakta0807/ecommerce-mern.git]
 
 
 ## ⚙️ Tech Stack
@@ -78,6 +78,6 @@ It replicates real-world eCommerce system architecture.
 ## 👨‍💻 Developer
 
 **Prajakta Yadav**  
-GitHub: [link](https://github.com/yadavprajakta0807 ) 
+GitHub: [https://github.com/yadavprajakta0807 ] 
 
 
